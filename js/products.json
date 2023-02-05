@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Turkish food",
+        "price": 243,
+        "button": "Add to card",
+        "image": "turkish_food_1.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "food name",
+        "price": 100,
+        "button": "Add to card",
+        "image": "turkish_food_2.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "food name",
+        "price": 100,
+        "button": "Add to card",
+        "image": "turkish_food_3.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "food name",
+        "price": 12,
+        "button": "Add to card",
+        "image": "turkish_food_4.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "food name",
+        "price": 125,
+        "button": "Add to card",
+        "image": "turkish_food_5.jpeg"
+        
+    },
+    {
+        "id": 6,
+        "name": "food name",
+        "price": 120,
+        "button": "Add to card",
+        "image": "turkish_food_6.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "food name",
+        "price": 120,
+        "button": "Add to card",
+        "image": "turkish_food_6.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Turkish food",
+        "price": 120,
+        "button": "Add to card",
+        "image": "turkish_food_6.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "food name",
+        "price": 120,
+        "button": "Add to card",
+        "image": "turkish_food_6.jpeg"
+    }
+]
+

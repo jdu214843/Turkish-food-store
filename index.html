@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkish food store</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <nav class="navigation-bar">
+                    <div class="logo">
+                        <h1>Turkiya Food Store</h1>
+                    </div>
+                        <div class="nav-main">
+                            <ul>
+                                <li><a href="Home">Home</a></li>
+                                <li><a href="food">Food</a></li>
+                                <li><a href="contact">Contact</a></li>
+                                <li><a href="address">Address</a></li>
+                            </ul>
+                        </div>
+                    <div class="nav-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+            </nav>
+        </div>
+   </div>
+   <!-- middle nav -->
+   <div class="container">
+        <div class="navigation-middle">
+            <div class="middle-right">
+                <h2>Products</h2>
+            </div>
+            <div class="middle-left">
+                <h2>Cart</h2>
+            </div>
+        </div>
+   </div>
+   <!-- middle nav end -->
+
+   
+    <!-- nav end -->
+
+    <!-- seciton start -->
+           <div class="container">
+                <div class="section-parent">
+                    <main class="section-main">
+                        
+                    </main>
+
+                    <!-- right section start -->
+                    <aside class="section-right">
+                        <div class="section-right-item" id="sections_item">
+                            <div class="food-count-1">
+                                <img src="images/turkish_food_1.jpeg" alt="">
+                            </div>
+                            <div class="food-count-2">
+                                <h3>Turkish food</h3>
+                                <div class="counts">
+                                    <button id="decrement" class="minus-btn disabled" type="button" disabled>-</button>
+                                    <input type="text" id="counter" class="display" value="0" maxlength="3" disabled>
+                                    <button id="increment" class="add-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="food-count-3">
+                                <i class="fa fa-trash"></i>
+                                <label for="total-screen">Total:<input type="" name="" id="total-screen" class="totals" disabled></label>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- right section end -->
+                </div>
+           </div>
+    <!-- section end -->
+
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
