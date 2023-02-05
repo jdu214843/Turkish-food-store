@@ -19,40 +19,29 @@ for (let i = 0; i < products.length; i++) {
         products[i].button +
    "</button>"
 
-  main.append(product);
+   main.append(product);
 }
-// start styles
 
-// end styles
-document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+// add to card onclick
 
-let valueCount
 
-// add btn start
-
-document.querySelector(".add-btn").addEventListener("click", function(){
-    valueCount = document.getElementById("counter").value;
-    valueCount++;
-
-    document.getElementById("counter").value = valueCount
-
-    if(valueCount > 1){
-        document.querySelector(".minus-btn").removeAttribute("disabled");
-        document.querySelector(".minus-btn").classList.remove("disabled");
+const RemoveCarditem = document.getElementsByClassName("fa-trash");
+    for(let i = 0; i < RemoveCarditem.length; i++){
+        let button = RemoveCarditem[i]
+        button.addEventListener("click", function(click){
+            let btnCliked = click.target
+            btnCliked.parentElement.parentElement.remove()
+            totalUpdate()
+        })
+       
     }
-})
 
-// add btn end
-document.querySelector(".minus-btn").addEventListener("click", function(){
-    valueCount = document.getElementById("counter").value;
-    valueCount--;
 
-    document.getElementById("counter").value = valueCount
 
-    if(valueCount == 1){
-        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
-    }
-});
+
+
+
+
 
 
 

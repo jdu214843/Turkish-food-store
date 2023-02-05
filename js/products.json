@@ -1,67 +1,67 @@
 [
     {
         "id": 1,
-        "name": "Turkish food",
-        "price": 243,
+        "name": "Go'shtli Khlibi",
+        "price": 57,
         "button": "Add to card",
         "image": "turkish_food_1.jpeg"
     },
     {
         "id": 2,
-        "name": "food name",
-        "price": 100,
+        "name": "Turkcha Pide",
+        "price": 15,
         "button": "Add to card",
         "image": "turkish_food_2.jpeg"
     },
     {
         "id": 3,
-        "name": "food name",
-        "price": 100,
+        "name": "Turk Kabab",
+        "price": 60,
         "button": "Add to card",
         "image": "turkish_food_3.jpeg"
     },
     {
         "id": 4,
-        "name": "food name",
+        "name": "Turk Kefta",
         "price": 12,
         "button": "Add to card",
         "image": "turkish_food_4.jpeg"
     },
     {
         "id": 5,
-        "name": "food name",
-        "price": 125,
+        "name": "Turk Borek",
+        "price": 17,
         "button": "Add to card",
         "image": "turkish_food_5.jpeg"
         
     },
     {
         "id": 6,
-        "name": "food name",
-        "price": 120,
+        "name": "Turk Simit va lahmacun",
+        "price": 27,
         "button": "Add to card",
         "image": "turkish_food_6.jpeg"
     },
     {
         "id": 7,
-        "name": "food name",
-        "price": 120,
+        "name": "Turk Anqara Kebab",
+        "price": 54,
         "button": "Add to card",
-        "image": "turkish_food_6.jpeg"
+        "image": "turkish_food_7.jpeg"
     },
     {
         "id": 8,
-        "name": "Turkish food",
-        "price": 120,
+        "name": "Turk Manti",
+        "price": 45,
         "button": "Add to card",
-        "image": "turkish_food_6.jpeg"
+        "image": "turkish_food_8.jpeg"
     },
     {
         "id": 9,
-        "name": "food name",
-        "price": 120,
+        "name": "Turk Künefe",
+        "price": 32,
         "button": "Add to card",
-        "image": "turkish_food_6.jpeg"
+        "image": "turkish_food_9.jpeg"
     }
 ]
 
