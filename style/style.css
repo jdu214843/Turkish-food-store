@@ -114,7 +114,7 @@ body{
 }
 .section-main div{
   box-shadow: 1px 2px 2px rgb(208 206 206), 0 0 25px rgb(223 223 223), 0 0 5px rgb(220 220 220);
-  margin: 15px;
+  margin-top: 15px;
   border-radius: 8px;
   position: relative;
 }
@@ -288,5 +288,40 @@ body{
 }
   /* footer end */
 
+
+/* media start */
+
+@media  screen and (max-width: 798px) {
+
+    .section-main{
+        width: 100%;
+    }
+    
+    .section-right{
+        display: none;
+    }
+    .navigation-middle .middle-right{
+        display: block;
+        width: 100%;
+    }
+    .middle-left{
+        display: none;
+    }
+    .nav-main{
+        display: none;
+    }
+   
+}
+@media  screen and (max-width: 567px){
+     .section-main .door img{
+        width: 380px;
+    }
+    .section-main div button{
+        top: 200px;
+        left: 150px;
+    }   
+}
+
+/* media end */
 
 
