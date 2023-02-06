@@ -99,10 +99,7 @@ body{
 
 
 
-.section-main{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .section-parent{
     display: flex;
 }
@@ -110,6 +107,7 @@ body{
     display: flex;
     width: 70%;
     margin: 10px;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .section-main div{
@@ -183,8 +181,7 @@ body{
 }
 
 
-.section-main div button:active {
-    display: block;
+.section-main div button:active{
     background-color: #fff;
     color: #000;
 }
