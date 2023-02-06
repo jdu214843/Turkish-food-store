@@ -15,7 +15,7 @@ for (let i = 0; i < products.length; i++) {
     "<p>" +
         products[i].price + "$" +
    "</p>"+
-   "<button>" +
+   "<button class='btn-add'>" +
         products[i].button +
    "</button>"
 
@@ -35,6 +35,8 @@ const RemoveCarditem = document.getElementsByClassName("fa-trash");
         })
        
     }
+    
+        
 
 
 

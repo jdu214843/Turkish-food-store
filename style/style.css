@@ -148,6 +148,7 @@ body{
 
 .section-main div:hover button{
     visibility: visible;
+    transition: all .3s ease;
     top: 190px;
 }
 
