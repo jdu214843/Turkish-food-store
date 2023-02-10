@@ -235,6 +235,10 @@ aside div button:active{
     color: rgb(255, 255, 255);
 }
 
+.card .btn-buy{
+    width: 200px;
+    height: 50px;
+}
   /*  section right end*/
   
   

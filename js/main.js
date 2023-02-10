@@ -15,13 +15,12 @@ for (let i = 0; i < products.length; i++) {
     "<p>" +
         products[i].price + "$" +
    "</p>"+
-   "<button class='btn-add' id='btn-adds'>" +
+   "<button class='btn-add'>1" +
         products[i].button +
    "</button>"
 
    main.append(product);
 };
-
 
 
 
@@ -57,7 +56,6 @@ for (let i = 0; i < products.length; i++) {
     "</div>"
    
    aside.append(product);
-   
 };
 
 // add to card onclick
@@ -83,6 +81,13 @@ const RemoveCarditem = document.getElementsByClassName("fa-trash");
 //             none.style.display = "none"
 //         }, 5000);
 //     })
+
+const addToCard = document.querySelectorAll(".btn-add");
+    addToCard.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            
+        })
+    })
 
 
 
