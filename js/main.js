@@ -30,7 +30,7 @@ for (let i = 0; i < products.length; i++) {
 
  
 const aside = document.querySelector("aside");  
- 
+
 document.querySelectorAll('.btn-add').forEach(btn => { 
   btn.addEventListener('click', buy) 
 }) 
@@ -55,33 +55,73 @@ function buy(event) {
                     "</p>" +
                 "</div>"+
                 "<div class='btn-dec_inc'>"+
-                    "<button>" +
+                    "<button class='decrease-btn'>" +
                         element.buttondec + 
                     "</button>"+
-                    "<input type='number' disabled>"+
-                    "<button>" +
+                    "<input type='text' id='display' readonly='' value='0'>"+
+                    "<button class='increase-btn'>" +
                         element.buttoninc + 
                     "</button>"+
-                "</div>"+
-                "<div class='remove-trash'>"+
-                    "<i class='fa fa-trash remove'></i>"+
-                "</div>"
+                  "</div>"+
+                 
+                  "<div class='remove-trash'>"+
+                      "<i class='fa fa-trash remove'></i>"+
+                      "<input type='text' id='total' readonly='' value='0'>"+
+                  "</div>"
            
-         
+          
           aside.append(product); 
 
-          let remove = document.querySelectorAll(".remove");
+            let remove = document.querySelectorAll(".remove");
             remove = remove[remove.length - 1]
             remove.addEventListener("click", (e) => {
                 e.target.parentNode.parentNode.remove()
-            })
+            });
+              let DecBtn = document.querySelector(".decrease-btn");
+              let Incbtn = document.querySelector(".increase-btn");
+              let display = document.querySelector("#display");
+              let totalScrenn = document.querySelector("#total");
+               
+                DecBtn.addEventListener("click", () => {
+                  display.value = parseInt(display.value) + 1;
+                });
+                Incbtn.addEventListener("click", () => {
+                    
+                    if(display.value <= 0){
+                      display.value = 0;
+                    }else{
+                      display.value = parseInt(display.value) - 1;
+                    }
+    
+                  });
+                DecBtn.addEventListener("click", () => {
+                  totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
+                });
+                Incbtn.addEventListener("click", () => {
+                  if(totalScrenn.value <= 0){
+                    totalScrenn.value = 0;
+                  }else{
+                    totalScrenn.value = parseFloat(totalScrenn.value) - element.price;
+                  };
+                });
+               
+            
           break; 
+          
         } 
+        
          
       } 
+      
 }
 
 // add to card onclick
+
+// decrease btn
+            
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Go'shtli Khlibi",
+        "name": "Go'shtli Khlibi ",
         "price": 57,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "name": "Turkcha Pide",
+        "name": "Turkcha Pide ",
         "price": 15,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "name": "Turk Kabab",
+        "name": "Turk Kabab ",
         "price": 60,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "name": "Turk Kefta",
+        "name": "Turk Kefta ",
         "price": 12,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "name": "Turk Borek",
+        "name": "Turk Borek ",
         "price": 17,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -52,7 +52,7 @@
     },
     {
         "id": 6,
-        "name": "lahmacun",
+        "name": "lahmacun ",
         "price": 27,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -62,7 +62,7 @@
     },
     {
         "id": 7,
-        "name": "Anqara Kebab",
+        "name": "Anqara Kebab ",
         "price": 54,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -72,7 +72,7 @@
     },
     {
         "id": 8,
-        "name": "Turk Manti",
+        "name": "Turk Manti ",
         "price": 45,
         "button": "Add to Cart",
         "buttondec":"+",
@@ -82,7 +82,7 @@
     },
     {
         "id": 9,
-        "name": "Turk Künefe",
+        "name": "Turk Künefe ",
         "price": 32,
         "button": "Add to Cart",
         "buttondec":"+",
