@@ -238,6 +238,11 @@ aside .card .remove-trash {
     justify-content: space-around;
     flex-direction:column;
 }
+aside .card .btn-dec_inc #display{
+    outline: none;
+    border: none;
+    text-align: center;
+}
 aside .card .remove-trash input{
     height: 20px;
     border: none;

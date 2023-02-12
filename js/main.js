@@ -77,11 +77,14 @@ function buy(event) {
             remove.addEventListener("click", (e) => {
                 e.target.parentNode.parentNode.remove()
             });
-              let DecBtn = document.querySelector(".decrease-btn");
-              let Incbtn = document.querySelector(".increase-btn");
-              let display = document.querySelector("#display");
-              let totalScrenn = document.querySelector("#total");
-               
+
+
+
+            let DecBtn = document.querySelector(".decrease-btn");
+            let Incbtn = document.querySelector(".increase-btn");
+            let display = document.querySelector("#display");
+            let totalScrenn = document.querySelector("#total");
+                
                 DecBtn.addEventListener("click", () => {
                   display.value = parseInt(display.value) + 1;
                 });
@@ -104,6 +107,7 @@ function buy(event) {
                     totalScrenn.value = parseFloat(totalScrenn.value) - element.price;
                   };
                 });
+              
                
             
           break; 
@@ -113,7 +117,9 @@ function buy(event) {
          
       } 
       
-}
+  
+};
+
 
 // add to card onclick
 
