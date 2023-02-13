@@ -121,55 +121,9 @@ function buy(event) {
          
       } 
       
-  
+      
+
 };
 
 
 // add to card onclick
-
-// decrease btn
-            
-
-
-
-
-
-
-//               let value = 0;
-
-//               document.getElementById("increase").addEventListener("click", function() {
-//                 value++;
-//                 document.getElementsByClassName(".display").input = value;
-//               });
-
-//               document.getElementById("decrease").addEventListener("click", function() {
-//                 value--;
-//                 document.getElementById("value").innerHTML = value;
-//               });
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        
-
-
-
-
-
-
-
-
-
-
-
-
