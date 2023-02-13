@@ -2,7 +2,7 @@ import products from "./products.json" assert { type: "json" };
  
 const main = document.querySelector("main"); 
  
- 
+let cart = [1, 3, 5]
 for (let i = 0; i < products.length; i++) { 
   const product = document.createElement("div"); 
   product.classList.add('product') 
@@ -31,8 +31,7 @@ for (let i = 0; i < products.length; i++) {
  
 const aside = document.querySelector("aside");  
 
-document.querySelectorAll('.btn-add').forEach(btn => { 
-    
+document.querySelectorAll('.btn-add').forEach(btn => {    
       btn.addEventListener('click', buy); 
     
 }) 
@@ -71,59 +70,66 @@ function buy(event) {
                   "</div>"
           
           aside.append(product); 
-            
-
           let remove = document.querySelectorAll(".remove");
-            remove = remove[remove.length - 1]
-            remove.addEventListener("click", (e) => {
-                e.target.parentNode.parentNode.remove()
-            });
-
-
-          let DecBtn = document.querySelectorAll(".decbtn");
-          let Incbtn = document.querySelectorAll(".incbtn");
-          let display = document.querySelectorAll(".display");
-          let totalScrenn = document.querySelectorAll(".total");
-              
-          DecBtn = DecBtn[DecBtn.length - 1]
-          display = display[display.length - 1]
-
-            DecBtn.addEventListener("click", () => {
-            display.value = parseInt(display.value) + 1;
-            });
-
-          Incbtn = Incbtn[Incbtn.length - 1]  
-          Incbtn.addEventListener("click", () => {
-              if(display.value <= 1){
-                display.value = 1;
-              }else{
-              
-                display.value = parseInt(display.value) - 1;
-              }
-          });
-          
-          totalScrenn = totalScrenn[totalScrenn.length - 1]
-          DecBtn.addEventListener("click", () => {
-            totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
+          remove = remove[remove.length - 1]
+          remove.addEventListener("click", (e) => {
+              e.target.parentNode.parentNode.remove()
           });
 
-          Incbtn.addEventListener("click", () => {
-            if ((parseInt(totalScrenn.value) - element.price) > 0) {
-              totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
-            }
-              
-          });   
+
+            let DecBtn = document.querySelectorAll(".decbtn");
+            let Incbtn = document.querySelectorAll(".incbtn");
+            let display = document.querySelectorAll(".display");
+            let totalScrenn = document.querySelectorAll(".total");
+                
+              DecBtn = DecBtn[DecBtn.length - 1]
+              display = display[display.length - 1]
+
+              DecBtn.addEventListener("click", () => {
+              display.value = parseInt(display.value) + 1;
+              });
+
+              Incbtn = Incbtn[Incbtn.length - 1] 
+              display.value = 1
+              Incbtn.addEventListener("click", () => {
+                  if(display.value <= 1){
+                  display.value = 1;
+                  }else{
+                  display.value = parseInt(display.value) - 1;
+                }
+              });
+        
+              totalScrenn = totalScrenn[totalScrenn.length - 1]
+              totalScrenn.value = element.price + "$"
+
+              DecBtn.addEventListener("click", () => {
+                totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
+              });
+
+              Incbtn.addEventListener("click", () => {
+                totalScrenn.value = element.price + "$"
+                if ((parseInt(totalScrenn.value) - element.price) > 0) {
+                  totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
+                }
+                  
+              });  
 
           break; 
           
-        } 
+        }
         
          
-      } 
+      } ;
+
       
+      
+        
       
 
 };
+
+
+
 
 
 // add to card onclick
