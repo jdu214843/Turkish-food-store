@@ -32,7 +32,9 @@ for (let i = 0; i < products.length; i++) {
 const aside = document.querySelector("aside");  
 
 document.querySelectorAll('.btn-add').forEach(btn => { 
-    btn.addEventListener('click', buy); 
+    
+      btn.addEventListener('click', buy); 
+    
 }) 
  
 function buy(event) { 
@@ -110,9 +112,7 @@ function buy(event) {
               totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
             }
               
-          });    
-
-          console.log();
+          });   
 
           break; 
           

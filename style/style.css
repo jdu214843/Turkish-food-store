@@ -193,7 +193,7 @@ aside .card {
 aside .card {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 aside .card div {
