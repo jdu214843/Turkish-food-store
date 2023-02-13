@@ -54,59 +54,70 @@ function buy(event) {
                     element.price + "$" + 
                     "</p>" +
                 "</div>"+
-                "<div class='btn-dec_inc'>"+
-                    "<button class='decrease-btn'>" +
+                  "<div class='btn-dec_inc'>"+
+                    "<button class='decrease decbtn'>" +
                         element.buttondec + 
                     "</button>"+
-                    "<input type='text' id='display' readonly='' value='0'>"+
-                    "<button class='increase-btn'>" +
+                    "<input type='text' class='display' readonly='' value='0'>"+
+                    "<button class='increase incbtn'>" +
                         element.buttoninc + 
                     "</button>"+
                   "</div>"+
-                 
                   "<div class='remove-trash'>"+
                       "<i class='fa fa-trash remove'></i>"+
-                      "<input type='text' id='total' readonly='' value='0'>"+
+                      "<input type='text' class='total' readonly='' value='0'>"+
                   "</div>"
-           
           
           aside.append(product); 
+            
 
-            let remove = document.querySelectorAll(".remove");
+          let remove = document.querySelectorAll(".remove");
             remove = remove[remove.length - 1]
             remove.addEventListener("click", (e) => {
                 e.target.parentNode.parentNode.remove()
             });
 
 
+          let DecBtn = document.querySelectorAll(".decbtn");
+          let Incbtn = document.querySelectorAll(".incbtn");
+          let display = document.querySelectorAll(".display");
+          let totalScrenn = document.querySelectorAll(".total");
+              
+          DecBtn = DecBtn[DecBtn.length - 1]
+          display = display[display.length - 1]
 
-            let DecBtn = document.querySelector(".decrease-btn");
-            let Incbtn = document.querySelector(".increase-btn");
-            let display = document.querySelector("#display");
-            let totalScrenn = document.querySelector("#total");
-                
-                DecBtn.addEventListener("click", () => {
-                  display.value = parseInt(display.value) + 1;
-                });
-                Incbtn.addEventListener("click", () => {
-                    
-                    if(display.value <= 0){
-                      display.value = 0;
-                    }else{
-                      display.value = parseInt(display.value) - 1;
-                    }
-    
-                  });
-                DecBtn.addEventListener("click", () => {
-                  totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
-                });
-                Incbtn.addEventListener("click", () => {
-                  if(totalScrenn.value <= 0){
-                    totalScrenn.value = 0;
-                  }else{
-                    totalScrenn.value = parseFloat(totalScrenn.value) - element.price;
-                  };
-                });
+            DecBtn.addEventListener("click", () => {
+            display.value = parseInt(display.value) + 1;
+            });
+
+          Incbtn = Incbtn[Incbtn.length - 1]  
+          Incbtn.addEventListener("click", () => {
+              if(display.value <= 1){
+                display.value = 1;
+              }else{
+              
+                display.value = parseInt(display.value) - 1;
+              }
+          });
+          
+          totalScrenn = totalScrenn[totalScrenn.length - 1]
+          DecBtn.addEventListener("click", () => {
+            totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
+          });
+
+          Incbtn.addEventListener("click", () => {
+            if ((parseInt(totalScrenn.value) - element.price) > 0) {
+              totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
+            }
+              
+          });
+
+          
+            
+
+
+
+            
               
                
             
@@ -125,6 +136,23 @@ function buy(event) {
 
 // decrease btn
             
+
+
+
+
+
+
+//               let value = 0;
+
+//               document.getElementById("increase").addEventListener("click", function() {
+//                 value++;
+//                 document.getElementsByClassName(".display").input = value;
+//               });
+
+//               document.getElementById("decrease").addEventListener("click", function() {
+//                 value--;
+//                 document.getElementById("value").innerHTML = value;
+//               });
 
 
 
