@@ -193,7 +193,7 @@ aside .card {
 aside .card {
     display: flex;
     justify-content: space-between;
-
+    margin-top: 40px;
 }
 
 aside .card div {
@@ -283,8 +283,13 @@ aside{
 }
 
 aside .totalbtn{
-    margin-bottom: 40px;
+    margin: 0 auto;
+    text-align:left;
 
+}
+aside .totalbtn button{
+    margin-top: 10px;
+    padding: 10px 40px;
 }
 /*  section product end*/
 
