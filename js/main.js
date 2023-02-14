@@ -1,8 +1,7 @@
 import products from "./products.json" assert { type: "json" }; 
  
 const main = document.querySelector("main"); 
- 
-let cart = [1, 3, 5]
+
 for (let i = 0; i < products.length; i++) { 
   const product = document.createElement("div"); 
   product.classList.add('product') 
@@ -48,6 +47,8 @@ function buy(event) {
                     "<img src='images/" + 
                     element.image +  
                     "' >" + 
+                "</div>"+
+                "<div class='information'>"+
                     "<p class='name'>"+ 
                     element.name + 
                     "</p>"+ 
@@ -55,6 +56,8 @@ function buy(event) {
                     element.price + "$" + 
                     "</p>" +
                 "</div>"+
+                    
+                
                   "<div class='btn-dec_inc'>"+
                     "<button class='decrease decbtn'>" +
                         element.buttondec + 
@@ -64,6 +67,7 @@ function buy(event) {
                         element.buttoninc + 
                     "</button>"+
                   "</div>"+
+
                   "<div class='remove-trash'>"+
                       "<i class='fa fa-trash remove'></i>"+
                       "<input type='text' class='total' readonly='' value='0'>"+
@@ -74,13 +78,16 @@ function buy(event) {
           remove = remove[remove.length - 1]
           remove.addEventListener("click", (e) => {
               e.target.parentNode.parentNode.remove()
+              
           });
+          
 
 
             let DecBtn = document.querySelectorAll(".decbtn");
             let Incbtn = document.querySelectorAll(".incbtn");
             let display = document.querySelectorAll(".display");
             let totalScrenn = document.querySelectorAll(".total");
+
                 
               DecBtn = DecBtn[DecBtn.length - 1]
               display = display[display.length - 1]
@@ -106,14 +113,26 @@ function buy(event) {
                 totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
               });
 
+              totalScrenn.value = element.price + "$"
               Incbtn.addEventListener("click", () => {
-                totalScrenn.value = element.price + "$"
                 if ((parseInt(totalScrenn.value) - element.price) > 0) {
                   totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
                 }
-                  
+               
               });  
-
+              if (id == products[i].id) { 
+                let Showtotal = document.querySelector(".totalscreen");
+                Showtotal.value = element.price + "$"
+                DecBtn.addEventListener("click", (e) => {
+                  Showtotal.value = parseInt(totalScrenn.value) + "$"
+                })
+                Incbtn.addEventListener("click", (e) => {
+                  if ((parseInt(Showtotal.value) - element.price) > 0) {
+                    Showtotal.value = parseInt(Showtotal.value) - element.price + "$";
+                  }
+                });
+              }
+              
           break; 
           
         }
@@ -127,6 +146,8 @@ function buy(event) {
       
 
 };
+
+
 
 
 

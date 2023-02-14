@@ -202,12 +202,20 @@ aside .card div {
 }
 
 aside .card .description {
-    width: 60%;
+    width: 20%;
 
 
 }
 
+aside .card .information{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: space-evenly;
+}
 aside .card .btn-dec_inc {
+    display: flex;
+    flex-direction: column;
     width: 20%;
     justify-content: center;
 }
