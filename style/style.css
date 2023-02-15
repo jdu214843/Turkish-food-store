@@ -366,5 +366,17 @@ aside .totalbtn button{
         font-size: 18px;
     }
 }
+@media screen and (max-width: 380px) {
+    .section-main .product img {
+        width: 300px;
+    }
+
+    .section-main .product button {
+        top: 220px;
+        left: 85px;
+        width: 150px;
+        font-size: 18px;
+    }
+}
 
 /* media end */
