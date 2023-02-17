@@ -335,8 +335,13 @@ aside .totalbtn button{
         width: 100%;
     }
 
-    .section-right {
+    aside {
         display: none;
+        visibility: hidden;
+    }
+    .nav-icon::before aside{
+        visibility: visible;
+
     }
 
     .navigation-middle .middle-right {

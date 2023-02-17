@@ -34,6 +34,9 @@ document.querySelectorAll('.btn-add').forEach(btn => {
       btn.addEventListener('click', buy); 
     
 }) 
+
+
+
  
 function buy(event) { 
   let id = event.target.dataset.id; 
