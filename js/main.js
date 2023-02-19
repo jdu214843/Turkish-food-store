@@ -46,35 +46,37 @@ function buy(event) {
           const product = document.createElement("div"); 
           product.classList.add('card') 
           product.innerHTML = 
-                "<div class='description'>"+
+                "<div class='cart-boxes'>"+
+                  "<div class='description'>"+
                     "<img src='images/" + 
-                    element.image +  
+                      element.image +  
                     "' >" + 
-                "</div>"+
-                "<div class='information'>"+
+                  "</div>"+
+                  "<div class='information'>"+
                     "<p class='name'>"+ 
                     element.name + 
                     "</p>"+ 
-                    "<p>"+ 
+                    "<p class='priceItem'>"+ 
                     element.price + "$" + 
                     "</p>" +
-                "</div>"+
-                    
+                  "</div>"+
                 
+            
                   "<div class='btn-dec_inc'>"+
                     "<button class='decrease decbtn'>" +
                         element.buttondec + 
                     "</button>"+
-                    "<input type='text' class='display' readonly='' value='0'>"+
+                      "<input type='text' class='display' readonly='' value='0'>"+
                     "<button class='increase incbtn'>" +
                         element.buttoninc + 
                     "</button>"+
                   "</div>"+
 
                   "<div class='remove-trash'>"+
-                      "<i class='fa fa-trash remove'></i>"+
-                      "<input type='text' class='total' readonly='' value='0'>"+
+                    "<i class='fa fa-trash remove'></i>"+
                   "</div>"
+               "</div>"
+     
           
           aside.append(product); 
           let remove = document.querySelectorAll(".remove");
@@ -89,9 +91,9 @@ function buy(event) {
             let DecBtn = document.querySelectorAll(".decbtn");
             let Incbtn = document.querySelectorAll(".incbtn");
             let display = document.querySelectorAll(".display");
-            let totalScrenn = document.querySelectorAll(".total");
 
-                
+            
+
               DecBtn = DecBtn[DecBtn.length - 1]
               display = display[display.length - 1]
 
@@ -102,39 +104,18 @@ function buy(event) {
               Incbtn = Incbtn[Incbtn.length - 1] 
               display.value = 1
               Incbtn.addEventListener("click", () => {
-                  if(display.value <= 1){
-                  display.value = 1;
-                  }else{
-                  display.value = parseInt(display.value) - 1;
+                if(display.value <= 1){
+                display.value = 1;
+                }else{
+                display.value = parseInt(display.value) - 1;
                 }
-              });
-        
-              totalScrenn = totalScrenn[totalScrenn.length - 1]
-              totalScrenn.value = element.price + "$"
 
-              DecBtn.addEventListener("click", () => {
-                totalScrenn.value = parseInt(totalScrenn.value) + element.price + "$";
               });
 
-              totalScrenn.value = element.price + "$"
-              Incbtn.addEventListener("click", () => {
-                if ((parseInt(totalScrenn.value) - element.price) > 0) {
-                  totalScrenn.value = parseInt(totalScrenn.value) - element.price + "$";
-                }
-               
-              });  
-              if (id == products[i].id) { 
-                let Showtotal = document.querySelector(".totalscreen");
-                Showtotal.value = element.price + "$"
-                DecBtn.addEventListener("click", (e) => {
-                  Showtotal.value = parseInt(totalScrenn.value) + "$"
-                })
-                Incbtn.addEventListener("click", (e) => {
-                  if ((parseInt(Showtotal.value) - element.price) > 0) {
-                    Showtotal.value = parseInt(Showtotal.value) - element.price + "$";
-                  }
-                });
-              }
+
+            
+            
+              
               
           break; 
           
@@ -157,3 +138,35 @@ function buy(event) {
 
 
 // add to card onclick
+
+//      function updatetotal(){
+          //   let cartContent = document.getElementsByClassName('card')[0];
+          //   let cartBoxes = cartContent.getElementsByClassName('cart-boxes')
+          //   let total = 0
+          //   for(let i = 0; i < cartBoxes.length; i++){
+          //     let cartBox = cartBoxes[i]
+          //     let cartPrice = cartBox.getElementsByClassName('priceItem')[0]
+          //     let quantityElement = cartBox.getElementsByClassName('cart-quantity')[0]
+          //     let price = parseFloat(cartPrice.innerText.replace("$", ""));
+          //     let quantity = quantityElement.value;
+          //     total = total + (price * quantity);
+          //     total = Math.round(total * 100) / 100;
+          
+          //     document.getElementsByClassName('total-price')[0].innerText = " $" + total;
+          //   }
+          // }
+
+          // function quantityChanged(event){
+          //   let input  = event.target
+          //   if(isNaN(input.value) || input.value <= 0) {
+          //     input.value = 1;
+          //   };
+          //   updatetotal();
+            
+            
+          // }
+          // let quantityDisplay = document.getElementsByClassName('cart-quantity');
+          // for(let i = 0; i < quantityDisplay.length; i++){
+          //   let input = quantityDisplay[i]
+          //   input.addEventListener('change', quantityChanged)
+          // }
