@@ -37,6 +37,8 @@ document.querySelectorAll('.btn-add').forEach(btn => {
 
 
 
+
+
  
 function buy(event) { 
   let id = event.target.dataset.id; 
@@ -112,6 +114,8 @@ function buy(event) {
 
               });
 
+              
+
 
             
             
@@ -120,6 +124,8 @@ function buy(event) {
           break; 
           
         }
+
+       
         
          
       } ;
@@ -133,7 +139,10 @@ function buy(event) {
 
 
 
-
+let addBtn = document.querySelector('.shopping');
+addBtn.addEventListener("click", function(){
+  aside.style.display = "block"
+});
 
 
 

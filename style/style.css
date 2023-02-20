@@ -342,14 +342,12 @@ aside .totalbtn button{
         width: 100%;
     }
 
-    aside {
-        display: none;
-        visibility: hidden;
-    }
-    .nav-icon::before aside{
-        visibility: visible;
-
-    }
+   aside{
+    position: absolute;
+    display: none;
+   }
+   
+    
 
     .navigation-middle .middle-right {
         display: block;
